@@ -1,5 +1,12 @@
 x = input() #replace with whatever if you want
 p = 0; l = [0]; L = 0; c = 0; C = [] #data
+"""specifics:
+x is input
+p is position on tape
+l is tape
+L is tape 0 pos (if there was a -1 pos, it would become [-1, 0, 1], and l[0] is -1, so there has to be 0 marker)
+c is nest counter
+C is list of nest initiators"""
 for i in enumerate(x): #[] stuff
     if i[1] == '[': c += 1; C.append([i[0]])
     try: 
